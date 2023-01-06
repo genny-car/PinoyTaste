@@ -93,4 +93,40 @@
     <string name="ilocos_norte_region_i">Region I -</string>
     <string name="rI_ilocos_norte">Ilocos Norte</string>
     <string name="vigan_longganisa">Vigan Longganisa</string>
+    <!-- LUZON->REGION 1->ILOCOS NORTE -->
+    <string name="ViganLongganisa"><b>Prep Time</b>
+    15 mins
+    Cooking Time
+    7 mins
+    Total Time
+    17 mins
+
+<b>Ingredients:</b>
+    3/4 kilogram ground pork
+    1/4 kilogram pork fat
+    1/4 cup garlic, minced
+    1 teaspoon ground black pepper
+    1/4 cup soy sauce
+    1 teaspoon annatto powder (atsuete)
+    1/4 cup iloko vinegar (sukang iloko), or vinegar
+
+<b>How to Cook</b>
+   ~ In a large bowl, mix ground pork, pork fat, garlic, pepper, soy sauce, atsuete powder, and vinegar until well blended.
+   ~ Portion meat mixture using an ice cream scoop onto a sheet of wax paper, measuring 5'' x 5''-inches. Roll until it forms into a log. Repeat with remaining meat mixtures
+   ~ Chill for at least 12 hours.
+
+<i><b>Originated</b>
+    Luzon
+    Region I, Ilocos Norte</i>
+
+
+
+
+
+
+    </string>
+    <string name="Bookmark">TODO</string>
+    <string name="bookmark">TODO</string>
+
+
 </resources>
