@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Home"
+        android:textColor="#090909"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/luzon_btn"
+        android:layout_width="308dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="120sp"
+        android:background="@drawable/loc_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Luzon"
+        android:textAllCaps="false"
+        android:textColor="#FFFCFC"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/visayas_btn"
+        android:layout_width="308dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="300sp"
+        android:background="@drawable/loc_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Visayas"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/mindanao_btn"
+        android:layout_width="308dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="480sp"
+        android:background="@drawable/loc_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Mindanao"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp" />
+
+</FrameLayout>
+

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Luzon"
+    tools:ignore="ExtraText">
+
+
+    android:id="@+id/button13"
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Luzon"
+        android:textColor="#d30000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <ImageButton
+        android:id="@+id/backbtn_luzon"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#00100F0F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        android:contentDescription="@string/luzon_back"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btncar"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/cordillera_administrative_region_car"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <Button
+        android:id="@+id/btn_reg1"
+        android:layout_width="308sp"
+        android:layout_height="50sp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_i_"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <Button
+        android:id="@+id/btnreg3"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_iii_central_luzon"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.365" />
+
+    <Button
+        android:id="@+id/btnreg5"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_v_bicol_region"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.675" />
+
+    <Button
+        android:id="@+id/btnreg4a"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_iv_a_calabarzon"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/btnreg4b"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_iv_b_mimaropa"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <Button
+
+        android:id="@+id/btnncr"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/national_capital_region_ncr"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
+
+    <Button
+
+        android:id="@+id/btnreg2"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="@string/region_ii_cagayan_valley"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
