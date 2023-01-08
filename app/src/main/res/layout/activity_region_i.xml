@@ -72,6 +72,7 @@
 
     <Button
 
+        android:id="@+id/btnilocossur"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:background="@drawable/location_btn"
