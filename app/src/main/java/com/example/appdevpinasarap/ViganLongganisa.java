@@ -2,9 +2,12 @@ package com.example.appdevpinasarap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -12,6 +15,7 @@ import org.w3c.dom.Text;
 public class ViganLongganisa extends AppCompatActivity {
 
     TextView txtlongganisa;
+    ImageButton backbtn_long;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,15 @@ public class ViganLongganisa extends AppCompatActivity {
         setContentView(R.layout.activity_vigan_longganisa);
 
         txtlongganisa = (TextView) findViewById(R.id.txtlongganisa);
+        backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
+
+        backbtn_long.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ViganLongganisa.this,RegionI.class));
+            }
+        });
+
 
         setHtmlTextView(txtlongganisa,"<b>Prep Time</b>\n" +
                 "<br>    15 mins\n</br>" +
