@@ -65,6 +65,7 @@ public class forgot_password extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
+                    txtveremail.setText("");
                     Toast.makeText(forgot_password.this,"Please check you email for verification",Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(forgot_password.this,"Error has Occurred",Toast.LENGTH_LONG).show();

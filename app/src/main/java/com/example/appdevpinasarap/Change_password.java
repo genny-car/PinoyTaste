@@ -77,6 +77,9 @@ public void changePass() {
         user.updatePassword(txtnewpassword).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
+                txtcurrpass.setText("");
+                txtnewpass.setText("");
+                txtconpass.setText("");
                 Toast.makeText(Change_password.this, "Password Changed Successfully", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {

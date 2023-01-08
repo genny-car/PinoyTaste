@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,153 +23,211 @@
         android:textColor="#000000"
         android:textSize="30sp" />
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/ic_baseline_account_circle_24"
-        android:contentDescription="@string/todo"
-        tools:ignore="ContentDescription" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <TextView
-        android:id="@+id/fullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="240dp"
-        android:fontFamily="@font/poppins_medium"
-        android:foregroundGravity="center_vertical|center|center_horizontal"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="@string/fullname"
-        android:textColor="#d30000"
-        android:textSize="25sp" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163"
+            tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/fnamed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="295dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/firstname"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/change_pass_btn"
+            android:layout_width="308dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:text="@string/change_password"
+            android:textAllCaps="false"
+            android:textColor="#d30000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_btn4" />
 
-    <TextView
-        android:id="@+id/lnamed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="330dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/lastname"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/edit_btn4"
+            android:layout_width="308dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="488dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:text="@string/edit_profile"
+            android:textAllCaps="false"
+            android:textColor="#d30000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/unamed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="365dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/username"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/log_out_btn"
+            android:layout_width="308dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:text="@string/log_out"
+            android:textAllCaps="false"
+            android:textColor="#d30000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_pass_btn"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/emaild"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="395dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/email"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/uemail"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/email_"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMinTextSize="14sp"
+            app:autoSizeStepGranularity="18sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.682"
+            app:layout_constraintStart_toEndOf="@+id/emaild"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.583" />
 
-    <TextView
-        android:id="@+id/firstName"
-        android:layout_width="216dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="295dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/fname"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/uname"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/uname"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.401"
+            app:layout_constraintStart_toEndOf="@+id/unamed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.537" />
 
-    <TextView
-        android:id="@+id/lastName"
-        android:layout_width="216dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="330dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/lname"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/lname"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintStart_toEndOf="@+id/lnamed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.482" />
 
-    <TextView
-        android:id="@+id/uname"
-        android:layout_width="216dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="365dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/uname"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fname"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toEndOf="@+id/fnamed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
 
-    <TextView
-        android:id="@+id/uemail"
-        android:layout_width="216dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="395dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/email_"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/fnamed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="First Name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
 
-    <Button
-        android:id="@+id/edit_btn4"
-        android:layout_width="308dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="460dp"
-        android:background="@drawable/edit_text_border"
-        android:fontFamily="@font/poppins"
-        android:text="@string/edit_profile"
-        android:textAllCaps="false"
-        android:textColor="#d30000"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/lnamed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Last Name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.484" />
 
-    <Button
-        android:id="@+id/change_pass_btn"
-        android:layout_width="308dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="520dp"
-        android:background="@drawable/edit_text_border"
-        android:fontFamily="@font/poppins"
-        android:text="@string/change_password"
-        android:textAllCaps="false"
-        android:textColor="#d30000"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/unamed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/username"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.537" />
 
-    <Button
-        android:id="@+id/log_out_btn"
-        android:layout_width="308dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="580dp"
-        android:background="@drawable/edit_text_border"
-        android:fontFamily="@font/poppins"
-        android:text="@string/log_out"
-        android:textAllCaps="false"
-        android:textColor="#d30000"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/emaild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/email"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.588" />
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="@string/fullname"
+            android:textColor="#d30000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.336" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
