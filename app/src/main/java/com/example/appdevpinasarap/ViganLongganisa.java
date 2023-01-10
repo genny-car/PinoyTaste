@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import org.w3c.dom.Text;
 
 public class ViganLongganisa extends AppCompatActivity {
 
+    FloatingActionButton bookmark_vigan;
     TextView txtlongganisa;
     ImageButton backbtn_long;
 
@@ -24,6 +27,7 @@ public class ViganLongganisa extends AppCompatActivity {
 
         txtlongganisa = (TextView) findViewById(R.id.txtlongganisa);
         backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
+        bookmark_vigan = (FloatingActionButton) findViewById(R.id.bookmark_vigan);
 
         backbtn_long.setOnClickListener(new View.OnClickListener() {
             @Override
