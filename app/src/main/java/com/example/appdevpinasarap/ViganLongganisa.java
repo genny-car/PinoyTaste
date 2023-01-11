@@ -23,6 +23,9 @@ public class ViganLongganisa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vigan_longganisa);
 
+        String name = getIntent().getStringExtra("NAME");
+        int image = getIntent().getIntExtra("IMAGE",0);
+
         txtlongganisa = (TextView) findViewById(R.id.textpigar);
         backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
         bookmark_vigan = (FloatingActionButton) findViewById(R.id.bookmark_iloko);

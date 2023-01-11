@@ -16,10 +16,12 @@ public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
 
     Context context;
     List<Item> items;
+    SelectInterface listener;
 
-    public myAdapter(Context context, List<Item> items) {
+    public myAdapter(Context context, List<Item> items, SelectInterface listener) {
         this.context = context;
         this.items = items;
+        this.listener = listener;
     }
 
     @NonNull
@@ -27,7 +29,7 @@ public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
     public ViewHolderClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = (LayoutInflater.from(context).inflate(R.layout.item_view,parent,false));
 
-        return new ViewHolderClass(v);
+        return new ViewHolderClass(v, listener);
     }
 
     @Override
@@ -35,6 +37,9 @@ public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
         Item itemsd = items.get(position);
         holder.nameView.setText(items.get(position).getName());
         holder.imageView.setImageResource(items.get(position).getImage());
+
+
+
 
         //Bookmarking or Favorites System
 
@@ -44,6 +49,5 @@ public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
     public int getItemCount() {
         return items.size();
     }
-
 
 }

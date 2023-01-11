@@ -1,6 +1,7 @@
 package com.example.appdevpinasarap;
 
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Item {
 
@@ -10,6 +11,7 @@ public class Item {
     public Item(String name, int image) {
         this.name = name;
         this.image = image;
+
     }
 
     public String getName() {
@@ -27,4 +29,5 @@ public class Item {
     public void setImage(int image) {
         this.image = image;
     }
+
 }
