@@ -95,6 +95,14 @@
     <string name="vigan_longganisa">Vigan Longganisa</string>
     <string name="Bookmark">TODO</string>
     <string name="bookmark">TODO</string>
+    <string name="luzon">Luzon</string>
+    <string name="r1_ilocos_sur">Ilocos Sur</string>
+    <string name="ilocos_empanada">Ilocos Empanada</string>
+    <string name="r1_la_union">La Union</string>
+    <string name="luzon_la_union">Luzon</string>
+    <string name="iloko_halo_halo">Iloko Halo-halo</string>
+    <string name="r1_pangasinan">Pangasinan</string>
+    <string name="pigar_pigar">Pigar-pigar</string>
 
 
 </resources>
