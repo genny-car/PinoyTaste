@@ -8,7 +8,7 @@
     tools:context=".ViganLongganisa">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appbarpigar"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:fitsSystemWindows="true"
@@ -68,7 +68,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txtlongganisa"
+                android:id="@+id/textpigar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -87,7 +87,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bookmark_vigan"
+        android:id="@+id/bookmark_iloko"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
@@ -98,7 +98,7 @@
         android:focusable="true"
         android:src="@drawable/saved"
         app:fabSize="normal"
-        app:layout_anchor="@id/appbar"
+        app:layout_anchor="@id/appbarpigar"
         app:layout_anchorGravity="end|bottom"
         tools:ignore="ContentDescription"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 

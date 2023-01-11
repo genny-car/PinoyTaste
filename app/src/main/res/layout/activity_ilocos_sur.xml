@@ -7,7 +7,7 @@
     tools:context=".IlocosSur">
 
     <ImageButton
-        android:id="@+id/backbtn_reg1"
+        android:id="@+id/backbtn_pangasinan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00000000"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.167" />
 
     <Button
-        android:id="@+id/ilocos_empanada"
+        android:id="@+id/btnilocos_empanada"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:background="@drawable/location_btn"

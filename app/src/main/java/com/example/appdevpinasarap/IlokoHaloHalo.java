@@ -15,7 +15,7 @@ public class IlokoHaloHalo extends AppCompatActivity {
 
 
     TextView txtilokohalohalo;
-    ImageButton backbtn_long;
+    ImageButton backbtn_longiloko;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -24,9 +24,9 @@ public class IlokoHaloHalo extends AppCompatActivity {
         setContentView(R.layout.activity_iloko_halo_halo);
 
         txtilokohalohalo = (TextView) findViewById(R.id.txtilokohalohalo);
-        backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
+        backbtn_longiloko = (ImageButton) findViewById(R.id.backbtn_longiloko);
 
-        backbtn_long.setOnClickListener(new View.OnClickListener() {
+        backbtn_longiloko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(IlokoHaloHalo.this,RegionI.class));

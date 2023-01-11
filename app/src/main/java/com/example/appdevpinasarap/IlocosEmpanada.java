@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 public class    IlocosEmpanada extends AppCompatActivity {
 
-    TextView txtilocosempanada;
-    ImageButton backbtn_long;
+    TextView txtempanada;
+    ImageButton backbtn_longempanada;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,10 +22,10 @@ public class    IlocosEmpanada extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ilocos_empanada);
 
-        txtilocosempanada = (TextView) findViewById(R.id.ilocos_empanada);
-        backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
+        txtempanada = (TextView) findViewById(R.id.txtempanada);
+        backbtn_longempanada = (ImageButton) findViewById(R.id.backbtn_longempanada);
 
-        backbtn_long.setOnClickListener(new View.OnClickListener() {
+        backbtn_longempanada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(IlocosEmpanada.this, RegionI.class));
@@ -77,9 +77,9 @@ public class    IlocosEmpanada extends AppCompatActivity {
     }
     public void setHtmlTextView(String html) {
         if (Build.VERSION.SDK_INT >= 24) {
-            txtilocosempanada.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
+            txtempanada.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
         } else {
-            txtilocosempanada.setText(Html.fromHtml(html));
+            txtempanada.setText(Html.fromHtml(html));
         }
 
     }

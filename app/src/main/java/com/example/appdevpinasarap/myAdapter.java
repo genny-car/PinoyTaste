@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.common.internal.service.Common;
+
 import java.util.List;
 
 public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
@@ -33,6 +35,9 @@ public class myAdapter extends RecyclerView.Adapter<ViewHolderClass> {
         Item itemsd = items.get(position);
         holder.nameView.setText(items.get(position).getName());
         holder.imageView.setImageResource(items.get(position).getImage());
+
+        //Bookmarking or Favorites System
+
     }
 
     @Override

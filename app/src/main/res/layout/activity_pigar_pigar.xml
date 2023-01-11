@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ctr_bg"
     tools:context=".PigarPigar">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appbarpigar"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:fitsSystemWindows="true"
@@ -21,7 +22,7 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Pigar-pigar">
+            app:title="Pigar Pigar">
 
             <ImageView
                 android:layout_width="296dp"
@@ -29,7 +30,7 @@
                 android:layout_gravity="center|end"
                 android:contentDescription="@string/Bookmark"
                 android:scaleType="centerCrop"
-                android:src="@drawable/PigarPigar"
+                android:src="@drawable/pigarpigar"
                 app:layout_collapseMode="parallax"
                 tools:ignore="ContentDescription" />
 
@@ -41,7 +42,7 @@
                 tools:ignore="InvalidId"></androidx.appcompat.widget.Toolbar>
 
             <ImageButton
-                android:id="@+id/backbtn_long"
+                android:id="@+id/backbtn_longpigar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00000000"
@@ -67,7 +68,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txtpigarpigar"
+                android:id="@+id/textpigar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -86,20 +87,19 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bookmark_pigar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:baselineAlignBottom="false"
-        android:clickable="true"
-        android:src="@drawable/saved"
-        app:fabSize="normal"
-        app:layout_anchor="@id/appbar"
-        app:layout_anchorGravity="end|bottom"
         android:layout_marginEnd="30dp"
         android:backgroundTint="#fff"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
         android:contentDescription="@string/bookmark"
         android:focusable="true"
-        tools:ignore="ContentDescription">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        android:src="@drawable/saved"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbarpigar"
+        app:layout_anchorGravity="end|bottom"
+        tools:ignore="ContentDescription"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

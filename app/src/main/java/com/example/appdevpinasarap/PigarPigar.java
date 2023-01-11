@@ -12,26 +12,26 @@ import android.widget.TextView;
 
 public class PigarPigar extends AppCompatActivity {
 
-    TextView txtpigarpigar;
-    ImageButton backbtn_long;
+    TextView textpigar;
+    ImageButton backbtn_longpigar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pigar_pigar);
 
-        txtpigarpigar = (TextView) findViewById(R.id.txtpigarpigar);
-        backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
+        textpigar = (TextView) findViewById(R.id.textpigar);
+        backbtn_longpigar = (ImageButton) findViewById(R.id.backbtn_longpigar);
 
-        backbtn_long.setOnClickListener(new View.OnClickListener() {
+        backbtn_longpigar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PigarPigar.this,RegionI.class));
+                startActivity(new Intent(PigarPigar.this,Pangasinan.class));
             }
         });
 
 
-        setHtmlTextView(txtpigarpigar,"<b>Prep Time</b>\n" +
+        setHtmlTextView(textpigar,"<b>Prep Time</b>\n" +
                 "<br>    1 hour 15 mins\n</br>" +
                 "<br>     Cooking Time\n</br>" +
                 "<br>     20 mins\n</br>" +
@@ -56,11 +56,11 @@ public class PigarPigar extends AppCompatActivity {
                 "<br>     Luzon\n</br>" +
                 "<br>     Region I, Pangasinan</i></br>");
     }
-    public void setHtmlTextView(TextView txtpigarpigar, String html) {
+    public void setHtmlTextView(TextView textpigar, String html) {
         if (Build.VERSION.SDK_INT >= 24) {
-            txtpigarpigar.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
+            textpigar.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
         } else {
-            txtpigarpigar.setText(Html.fromHtml(html));
+            textpigar.setText(Html.fromHtml(html));
         }
 
 

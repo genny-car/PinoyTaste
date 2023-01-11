@@ -7,7 +7,7 @@
     tools:context=".RegionI">
 
     <ImageButton
-        android:id="@+id/backbtn_reg1"
+        android:id="@+id/backbtn_pangasinan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00000000"
@@ -54,7 +54,7 @@
 
     <Button
 
-        android:id="@+id/button17"
+        android:id="@+id/btnilocosnorte"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:background="@drawable/location_btn"
@@ -90,7 +90,7 @@
 
     <Button
 
-        android:id="@+id/button25"
+        android:id="@+id/btn_launion"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:background="@drawable/location_btn"
@@ -108,7 +108,7 @@
 
     <Button
 
-        android:id="@+id/button24"
+        android:id="@+id/btn_pangasinan"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:background="@drawable/location_btn"

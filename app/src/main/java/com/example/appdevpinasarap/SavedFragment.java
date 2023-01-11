@@ -9,13 +9,23 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class SavedFragment extends Fragment {
 
-RecyclerView bookmark_view;
+    RecyclerView bookmark_view;
+
+    FirebaseUser user;
+    FirebaseDatabase db;
+    FirebaseAuth iAuth;
+    DatabaseReference reference;
     public SavedFragment() {
 
     }
@@ -43,6 +53,8 @@ RecyclerView bookmark_view;
         bookmark_view.setHasFixedSize(true);
         myAdapter adapterMy = new myAdapter(getContext(), items);
         bookmark_view.setAdapter(adapterMy);
+
+
 
 
         return v;

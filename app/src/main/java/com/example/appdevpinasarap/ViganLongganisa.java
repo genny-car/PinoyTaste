@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.w3c.dom.Text;
-
 public class ViganLongganisa extends AppCompatActivity {
 
     FloatingActionButton bookmark_vigan;
@@ -25,9 +23,9 @@ public class ViganLongganisa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vigan_longganisa);
 
-        txtlongganisa = (TextView) findViewById(R.id.txtlongganisa);
+        txtlongganisa = (TextView) findViewById(R.id.textpigar);
         backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
-        bookmark_vigan = (FloatingActionButton) findViewById(R.id.bookmark_vigan);
+        bookmark_vigan = (FloatingActionButton) findViewById(R.id.bookmark_iloko);
 
         backbtn_long.setOnClickListener(new View.OnClickListener() {
             @Override
