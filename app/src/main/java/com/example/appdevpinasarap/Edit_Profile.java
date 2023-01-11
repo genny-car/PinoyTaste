@@ -24,7 +24,6 @@ import java.util.HashMap;
 public class Edit_Profile extends AppCompatActivity {
 
     Button editbtnsave;
-    ImageButton back_btn1;
     DatabaseReference reference;
     EditText txteditfname,txteditlname,txteditusername;
 
@@ -36,15 +35,11 @@ public class Edit_Profile extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         editbtnsave = (Button) findViewById(R.id.editbtnsave);
-        back_btn1 = (ImageButton) findViewById(R.id.back_btn1);
 
         txteditfname = (EditText) findViewById(R.id.txteditfname);
         txteditlname = (EditText) findViewById(R.id.txteditlname);
         txteditusername = (EditText) findViewById(R.id.txteditusername);
-
-        back_btn1.setOnClickListener(view -> {
-           startActivity(new Intent(Edit_Profile.this, BottomNav.class));
-        });
+        
 
         editbtnsave.setOnClickListener(view -> {
             String editfname = txteditfname.getText().toString();

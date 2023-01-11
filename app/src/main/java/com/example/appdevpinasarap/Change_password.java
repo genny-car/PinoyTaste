@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Change_password extends AppCompatActivity {
 
-    ImageButton back_btn2;
+
     Button btnchangepass;
     EditText txtcurrpass,txtnewpass,txtconpass;
 
@@ -31,7 +31,6 @@ public class Change_password extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        back_btn2 = (ImageButton) findViewById(R.id.back_btn2);
         btnchangepass = (Button) findViewById(R.id.btnchangepass);
         txtcurrpass = (EditText) findViewById(R.id.txtcurrpass);
         txtnewpass = (EditText) findViewById(R.id.txtnewpass);
@@ -41,9 +40,7 @@ public class Change_password extends AppCompatActivity {
         UserID = zAuth.getCurrentUser().getUid();
         user = zAuth.getCurrentUser();
 
-        back_btn2.setOnClickListener(view -> {
-            startActivity(new Intent(Change_password.this, BottomNav.class));
-        });
+
 
         btnchangepass.setOnClickListener(new View.OnClickListener() {
             @Override
