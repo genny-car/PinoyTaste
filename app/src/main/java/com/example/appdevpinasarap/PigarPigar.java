@@ -20,7 +20,7 @@ public class PigarPigar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pigar_pigar);
 
-        textpigar = (TextView) findViewById(R.id.textpigar);
+        textpigar = (TextView) findViewById(R.id.textlongganisa);
         backbtn_longpigar = (ImageButton) findViewById(R.id.backbtn_longpigar);
 
         backbtn_longpigar.setOnClickListener(new View.OnClickListener() {

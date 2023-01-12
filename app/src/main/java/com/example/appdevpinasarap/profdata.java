@@ -1,7 +1,7 @@
 package com.example.appdevpinasarap;
 
 public class profdata {
-    String fname,lname,email,username,password;
+    String fname,lname,email,username,password,title;
     public profdata(){
 
     }
@@ -12,6 +12,7 @@ public class profdata {
         this.email = email;
         this.username = username;
         this.password = password;
+        this.title = title;
     }
 
     public String getFname() {
@@ -52,5 +53,13 @@ public class profdata {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

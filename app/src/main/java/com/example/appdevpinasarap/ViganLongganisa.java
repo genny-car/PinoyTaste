@@ -1,22 +1,42 @@
 package com.example.appdevpinasarap;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 public class ViganLongganisa extends AppCompatActivity {
 
     FloatingActionButton bookmark_vigan;
-    TextView txtlongganisa;
     ImageButton backbtn_long;
+    ImageView imageLongganisa;
+
+    FirebaseUser user;
+    DatabaseReference reference,reference1, db, db1;
+    public String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +46,7 @@ public class ViganLongganisa extends AppCompatActivity {
         String name = getIntent().getStringExtra("NAME");
         int image = getIntent().getIntExtra("IMAGE",0);
 
-        txtlongganisa = (TextView) findViewById(R.id.textpigar);
+
         backbtn_long = (ImageButton) findViewById(R.id.backbtn_long);
         bookmark_vigan = (FloatingActionButton) findViewById(R.id.bookmark_iloko);
 
@@ -38,7 +58,55 @@ public class ViganLongganisa extends AppCompatActivity {
         });
 
 
-        setHtmlTextView(txtlongganisa,"<b>Prep Time</b>\n" +
+        reference = FirebaseDatabase.getInstance().getReference();
+        reference1 = reference.child("Bookmarks").child("ViganLongganisa");
+
+        imageLongganisa = (ImageView) findViewById(R.id.imageLongganisa);
+        final TextView titlelongganisa = (TextView) findViewById(R.id.titlelongganisa);
+        final TextView textlongganisa = (TextView) findViewById(R.id.textlongganisa);
+
+        reference1.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            String texts = snapshot.child("image").getValue(String.class);
+            String link = snapshot.child("image").getValue(String.class);
+            String titles = snapshot.child("title").getValue(String.class);
+
+            Picasso.get().load(link).into(imageLongganisa);
+            titlelongganisa.setText(titles);
+
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        bookmark_vigan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String title1 = titlelongganisa.getText().toString();
+
+                if(!title1.isEmpty()){
+                    user = FirebaseAuth.getInstance().getCurrentUser();
+                    db = FirebaseDatabase.getInstance().getReference();
+                    db1 = db.child("profdata");
+
+
+                    db1.child(user.getUid()).child("Bookmarks").child("ViganLongganisa").child("title").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(ViganLongganisa.this,"Bookmarked Successfully",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }
+            }
+        });
+
+        setHtmlTextView(textlongganisa,"<b>Prep Time</b>\n" +
                 "<br>    15 mins\n</br>" +
                 "<br>     Cooking Time\n</br>" +
                 "<br>     7 mins\n</br>" +
@@ -62,12 +130,15 @@ public class ViganLongganisa extends AppCompatActivity {
                 "<br> <i><b>Originated</b>\n</br>" +
                 "<br>     Luzon\n</br>" +
                 "<br>     Region I, Ilocos Norte</i></br>");
-    }
-    public void setHtmlTextView(TextView txtlongganisa, String html) {
+
+
+
+        }
+    public void setHtmlTextView(TextView textlongganisa, String html) {
         if (Build.VERSION.SDK_INT >= 24) {
-            txtlongganisa.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
+            textlongganisa.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
         } else {
-            txtlongganisa.setText(Html.fromHtml(html));
+            textlongganisa.setText(Html.fromHtml(html));
         }
     }
 }
