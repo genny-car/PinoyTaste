@@ -131,6 +131,10 @@ public class ViganLongganisa extends AppCompatActivity {
                 "<br>     Luzon\n</br>" +
                 "<br>     Region I, Ilocos Norte</i></br>");
 
+        titlelongganisa.setText(getIntent().getExtras().getString("title"));
+        int imageId = getIntent().getIntExtra("image",0);
+        imageLongganisa.setImageResource(imageId);
+
 
 
         }

@@ -16,26 +16,12 @@ public class ViewHolderClass extends RecyclerView.ViewHolder {
 
     ImageView imageView;
     TextView nameView;
-    ImageButton imageButtonView;
 
-    public ViewHolderClass(@NonNull View itemView, SelectInterface listener) {
+    public ViewHolderClass(@NonNull View itemView) {
         super(itemView);
 
         imageView = (ImageView) itemView.findViewById(R.id.imageView);
         nameView = (TextView) itemView.findViewById(R.id.nameView);
-        imageButtonView = (ImageButton) itemView.findViewById(R.id.imageButtonView);
 
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(listener != null){
-                    int pos = getBindingAdapterPosition();
-
-                    if(pos != RecyclerView.NO_POSITION){
-                        listener.onItemClicked(pos);
-                    }
-                }
-            }
-        });
     }
 }

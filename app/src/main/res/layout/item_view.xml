@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/relativeLayout">
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="7dp">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/imageView"
-        android:layout_marginRight="10dp"
-        android:layout_centerVertical="true">
-    </ImageView>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nameView"
-        android:layout_toEndOf="@id/imageView"
-        android:textColor="@android:color/black"
-        android:text="Name"
-        android:textSize="30dp"></TextView>
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageButtonView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignBottom="@+id/nameView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="342dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="-2dp"
-        android:background="@android:color/white"
-        app:srcCompat="@drawable/ic_baseline_bookmark_24" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/viganlongganisa"></ImageView>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ctr_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Vigan Longganisa"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="30dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

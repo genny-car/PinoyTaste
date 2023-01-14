@@ -19,10 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import kotlinx.coroutines.internal.InternalAnnotationsKt;
 
-
-public class SavedFragment extends Fragment implements SelectInterface{
+public class SavedFragment extends Fragment{
 
     RecyclerView bookmark_view;
 
@@ -54,28 +52,15 @@ public class SavedFragment extends Fragment implements SelectInterface{
 
         List<Item> items = new ArrayList<Item>();
         items.add(new Item("Vigan Longganisa", R.drawable.viganlongganisa));
+        items.add(new Item("Pigar Pigar", R.drawable.pigarpigar));
 
         bookmark_view = v.findViewById(R.id.bookmark_view);
         bookmark_view.setLayoutManager(new LinearLayoutManager(getContext()));
         bookmark_view.setHasFixedSize(true);
-        myAdapter adapterMy = new myAdapter(getContext(),items,this);
+        MyAdapter adapterMy = new MyAdapter(context, items);
         bookmark_view.setAdapter(adapterMy);
 
 
         return v;
-    }
-
-    @Override
-    public void onItemClicked(int position) {
-        LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.fragment_saved, null);
-        Intent intent = new Intent();
-        intent.setClass(view.getContext(),ViganLongganisa.class);
-        view.getContext().startActivity(intent);
-
-        intent.putExtra("NAME", items.get(position).getName());
-        intent.putExtra("IMAGE", items.get(position).getImage());
-
-        startActivity(intent);
     }
 }
