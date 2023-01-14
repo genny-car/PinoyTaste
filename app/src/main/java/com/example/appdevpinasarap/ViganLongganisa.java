@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -26,9 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
-public class ViganLongganisa extends AppCompatActivity {
+public class ViganLongganisa extends AppCompatActivity  {
 
     FloatingActionButton bookmark_vigan;
     ImageButton backbtn_long;
@@ -63,14 +60,14 @@ public class ViganLongganisa extends AppCompatActivity {
 
         imageLongganisa = (ImageView) findViewById(R.id.imageLongganisa);
         final TextView titlelongganisa = (TextView) findViewById(R.id.titlelongganisa);
-        final TextView textlongganisa = (TextView) findViewById(R.id.textlongganisa);
+        final TextView textlongganisa = (TextView) findViewById(R.id.textpigar);
 
         reference1.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
             String texts = snapshot.child("image").getValue(String.class);
             String link = snapshot.child("image").getValue(String.class);
-            String titles = snapshot.child("title").getValue(String.class);
+            String titles = snapshot.child("name").getValue(String.class);
 
             Picasso.get().load(link).into(imageLongganisa);
             titlelongganisa.setText(titles);
@@ -89,22 +86,28 @@ public class ViganLongganisa extends AppCompatActivity {
             public void onClick(View view) {
                 String title1 = titlelongganisa.getText().toString();
 
-                if(!title1.isEmpty()){
+
+                if (!title1.isEmpty()) {
                     user = FirebaseAuth.getInstance().getCurrentUser();
                     db = FirebaseDatabase.getInstance().getReference();
                     db1 = db.child("profdata");
 
 
-                    db1.child(user.getUid()).child("Bookmarks").child("ViganLongganisa").child("title").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    db1.child(user.getUid()).child("Bookmarks").child("ViganLongganisa").child("name").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(ViganLongganisa.this,"Bookmarked Successfully",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ViganLongganisa.this, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
                         }
                     });
+
+                    /*titlelongganisa.setText(getIntent().getExtras().getString("title"));
+                    int imageId = getIntent().getIntExtra("image",0);
+                    imageLongganisa.setImageResource(imageId);*/
 
                 }
             }
         });
+
 
         setHtmlTextView(textlongganisa,"<b>Prep Time</b>\n" +
                 "<br>    15 mins\n</br>" +
@@ -131,9 +134,6 @@ public class ViganLongganisa extends AppCompatActivity {
                 "<br>     Luzon\n</br>" +
                 "<br>     Region I, Ilocos Norte</i></br>");
 
-        titlelongganisa.setText(getIntent().getExtras().getString("title"));
-        int imageId = getIntent().getIntExtra("image",0);
-        imageLongganisa.setImageResource(imageId);
 
 
 

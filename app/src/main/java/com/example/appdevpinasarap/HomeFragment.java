@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment {
                 if(userProfile != null){
                     String name = userProfile.fname;
 
-                    txtviewhomename.setText("Hello! " + name);
+                    txtviewhomename.setText("Hello, " + name + "!");
                 }
                 }
 

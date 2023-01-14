@@ -57,19 +57,19 @@ public class SignUpActivity extends AppCompatActivity {
 
                 String fname = txtfname.getText().toString();
                 String lname= txtlname.getText().toString();
-                String username = txtuser.getText().toString();
-                String email = txtemail.getText().toString();
+                String email = txtuser.getText().toString();
+                String username = txtemail.getText().toString();
                 String password = txtpass.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
-                    txtemail.setError("No Email Found");
-                    txtemail.requestFocus();
+                    txtuser.setError("No Email Found");
+                    txtuser.requestFocus();
                 } else if (TextUtils.isEmpty(password)) {
                     txtpass.setError("No Password Found");
                     txtpass.requestFocus();
                 } else if (TextUtils.isEmpty(username)) {
-                    txtuser.setError("No Username Found");
-                    txtuser.requestFocus();
+                    txtemail.setError("No Username Found");
+                    txtemail.requestFocus();
                 } else if (TextUtils.isEmpty(fname)) {
                     txtuser.setError("No First Name Found");
                     txtuser.requestFocus();
@@ -77,7 +77,7 @@ public class SignUpActivity extends AppCompatActivity {
                     txtuser.setError("No Last Name Found");
                     txtuser.requestFocus();
                 }else {
-                    mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){user = FirebaseAuth.getInstance().getCurrentUser();

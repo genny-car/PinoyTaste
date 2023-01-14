@@ -20,9 +20,9 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolderClass> {
 
     Context context;
-    List<Item> items;
+    List<Bookmarks> items;
 
-    public MyAdapter(Context context, List<Item> items) {
+    public MyAdapter(Context context, List<Bookmarks> items) {
         this.context = context;
         this.items = items;
 
@@ -39,17 +39,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolderClass> {
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.ViewHolderClass holder, int position) {
-        Item itemsd = items.get(position);
+        Bookmarks itemsd = items.get(position);
         holder.nameView.setText(items.get(position).getName());
         holder.imageView.setImageResource(items.get(position).getImage());
         String nameView_position = items.get(position).getName();
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ViganLongganisa.class);
-                intent.putExtra("Vigan Longganisa",itemsd.getName());
-                intent.putExtra("image",itemsd.getImage());
-                view.getContext().startActivity(intent);
+                if (nameView_position == "Vigan Longganisa") {
+                    Intent intent = new Intent(view.getContext(), ViganLongganisa.class);
+                    intent.putExtra("Vigan Longganisa", itemsd.getName());
+                    intent.putExtra("image", itemsd.getImage());
+                    view.getContext().startActivity(intent);
+                }else if(nameView_position == "Pigar Pigar") {
+                    Intent intent = new Intent(view.getContext(), PigarPigar.class);
+                    intent.putExtra("Pigar Pigar", itemsd.getName());
+                    intent.putExtra("image", itemsd.getImage());
+                }
             }
         });
 

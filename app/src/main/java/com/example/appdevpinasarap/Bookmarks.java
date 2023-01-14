@@ -2,29 +2,28 @@ package com.example.appdevpinasarap;
 
 public class Bookmarks {
 
-    String text;
-    String title;
+    String name;
+    int image;
 
-    public Bookmarks(String text, String title) {
+    public Bookmarks(String name, int image) {
+        this.name = name;
+        this.image = image;
 
-        this.text = text;
-        this.title = title;
     }
 
-
-    public String getText() {
-        return text;
+    public String getName() {
+        return name;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTitle() {
-        return title;
+    public int getImage() {
+        return image;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setImage(int image) {
+        this.image = image;
     }
 }

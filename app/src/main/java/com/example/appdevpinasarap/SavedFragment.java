@@ -50,9 +50,9 @@ public class SavedFragment extends Fragment{
         bookmark_view = v.findViewById(R.id.bookmark_view);
 
 
-        List<Item> items = new ArrayList<Item>();
-        items.add(new Item("Vigan Longganisa", R.drawable.viganlongganisa));
-        items.add(new Item("Pigar Pigar", R.drawable.pigarpigar));
+        List<Bookmarks> items = new ArrayList<Bookmarks>();
+        items.add(new Bookmarks("Vigan Longganisa", R.drawable.viganlongganisa));
+        items.add(new Bookmarks("Pigar Pigar", R.drawable.pigarpigar));
 
         bookmark_view = v.findViewById(R.id.bookmark_view);
         bookmark_view.setLayoutManager(new LinearLayoutManager(getContext()));

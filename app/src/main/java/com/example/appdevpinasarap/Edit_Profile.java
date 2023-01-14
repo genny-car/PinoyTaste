@@ -26,6 +26,7 @@ public class Edit_Profile extends AppCompatActivity {
     Button editbtnsave;
     DatabaseReference reference;
     EditText txteditfname,txteditlname,txteditusername;
+    ImageButton backbtn_edit;
 
     FirebaseUser user;
 
@@ -35,6 +36,7 @@ public class Edit_Profile extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         editbtnsave = (Button) findViewById(R.id.editbtnsave);
+        backbtn_edit = (ImageButton) findViewById(R.id.backbtn_edit);
 
         txteditfname = (EditText) findViewById(R.id.txteditfname);
         txteditlname = (EditText) findViewById(R.id.txteditlname);
@@ -48,6 +50,10 @@ public class Edit_Profile extends AppCompatActivity {
             update(editfname,editlname,editusername);
 
 
+        });
+
+        backbtn_edit.setOnClickListener(view -> {
+            startActivity(new Intent(Edit_Profile.this, BottomNav.class));
         });
 
     }

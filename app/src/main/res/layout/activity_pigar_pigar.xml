@@ -21,8 +21,7 @@
             android:background="@drawable/ctr_bg"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Pigar Pigar">
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
                 android:layout_width="296dp"
@@ -51,6 +50,26 @@
                 app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
                 tools:ignore="ContentDescription" />
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titlepigar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Title Here"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.097"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.882" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -68,7 +87,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textlongganisa"
+                android:id="@+id/textpigar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"

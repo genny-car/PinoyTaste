@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class IlokoHaloHalo extends AppCompatActivity {
 
 
-    TextView txtilokohalohalo;
+    TextView txtilokohalohalo,titleiloko;
     ImageButton backbtn_longiloko;
 
     @SuppressLint("MissingInflatedId")
