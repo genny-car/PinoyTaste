@@ -24,6 +24,7 @@
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
+                android:id="@+id/imagePigar"
                 android:layout_width="296dp"
                 android:layout_height="246dp"
                 android:layout_gravity="center|end"

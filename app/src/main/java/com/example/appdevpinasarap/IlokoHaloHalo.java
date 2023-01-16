@@ -1,5 +1,6 @@
 package com.example.appdevpinasarap;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,15 +10,33 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class IlokoHaloHalo extends AppCompatActivity {
 
 
     TextView txtilokohalohalo,titleiloko;
     ImageButton backbtn_longiloko;
+    FloatingActionButton bookmark_iloko;
+    ImageView imageIloko;
 
-    @SuppressLint("MissingInflatedId")
+    FirebaseUser user;
+    DatabaseReference reference,reference1, db, db1;
+    public String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +44,60 @@ public class IlokoHaloHalo extends AppCompatActivity {
 
         txtilokohalohalo = (TextView) findViewById(R.id.txtilokohalohalo);
         backbtn_longiloko = (ImageButton) findViewById(R.id.backbtn_longiloko);
+        imageIloko = (ImageView) findViewById(R.id.imageIloko);
+        bookmark_iloko = (FloatingActionButton) findViewById(R.id.bookmark_iloko);
 
         backbtn_longiloko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(IlokoHaloHalo.this,RegionI.class));
+            }
+        });
+
+        reference = FirebaseDatabase.getInstance().getReference();
+        reference1 = reference.child("Bookmarks").child("IlokoHaloHalo");
+
+        final TextView titleiloko= (TextView) findViewById(R.id.titleiloko);
+
+        reference1.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String texts = snapshot.child("image").getValue(String.class);
+                String link = snapshot.child("image").getValue(String.class);
+                String titles = snapshot.child("name").getValue(String.class);
+
+
+                titleiloko.setText(titles);
+                Picasso.get().load(link).into(imageIloko);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        bookmark_iloko.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String title1 = titleiloko.getText().toString();
+
+
+                if (!title1.isEmpty()) {
+                    user = FirebaseAuth.getInstance().getCurrentUser();
+                    db = FirebaseDatabase.getInstance().getReference();
+                    db1 = db.child("profdata");
+
+
+                    db1.child(user.getUid()).child("Bookmarks").child("IlokoHaloHalo").child("name").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(IlokoHaloHalo.this, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    //titlepigar.setText(getIntent().getExtras().getString("title"));
+                }
             }
         });
 

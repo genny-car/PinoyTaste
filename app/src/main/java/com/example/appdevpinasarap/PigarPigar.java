@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -30,6 +31,7 @@ public class PigarPigar extends AppCompatActivity {
     FloatingActionButton bookmark_pigar;
     TextView textpigar, titlepigar;
     ImageButton backbtn_longpigar;
+    ImageView imagePigar;
 
     FirebaseUser user;
     DatabaseReference reference,reference1, db, db1;
@@ -43,6 +45,7 @@ public class PigarPigar extends AppCompatActivity {
         textpigar = (TextView) findViewById(R.id.textpigar);
         backbtn_longpigar = (ImageButton) findViewById(R.id.backbtn_longpigar);
         bookmark_pigar = (FloatingActionButton) findViewById(R.id.bookmark_pigar);
+        imagePigar = (ImageView) findViewById(R.id.imagePigar);
 
         backbtn_longpigar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +69,7 @@ public class PigarPigar extends AppCompatActivity {
 
 
                 titlepigar.setText(titles);
+                Picasso.get().load(link).into(imagePigar);
 
             }
 
