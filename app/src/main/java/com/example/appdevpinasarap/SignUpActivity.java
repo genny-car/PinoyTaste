@@ -80,7 +80,8 @@ public class SignUpActivity extends AppCompatActivity {
                     mAuth.createUserWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){user = FirebaseAuth.getInstance().getCurrentUser();
+                            if(task.isSuccessful()){
+                                user = FirebaseAuth.getInstance().getCurrentUser();
                                profdata prof = new profdata(fname,lname,username,email,password);
                                db.getInstance().getReference("profdata").child(user.getUid())
                                        .setValue(prof).addOnCompleteListener(new OnCompleteListener<Void>() {

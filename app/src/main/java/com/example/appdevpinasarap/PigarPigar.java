@@ -99,7 +99,7 @@ public class PigarPigar extends AppCompatActivity {
                             Toast.makeText(PigarPigar.this, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
                         }
                     });
-                    //titlepigar.setText(getIntent().getExtras().getString("title"));
+                    //titlepigar.setText(getIntent().getExtras().getString("title"));//
                 }
             }
         });
