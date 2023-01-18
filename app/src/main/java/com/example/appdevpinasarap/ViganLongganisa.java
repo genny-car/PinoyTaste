@@ -119,6 +119,8 @@ public class ViganLongganisa extends AppCompatActivity  {
                                     Toast.makeText(ViganLongganisa.this, "Bookmark Removed", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                        }else{
+                            Toast.makeText(ViganLongganisa.this,"Try Again!", Toast.LENGTH_SHORT).show();
                         }
                         i = 0;
 

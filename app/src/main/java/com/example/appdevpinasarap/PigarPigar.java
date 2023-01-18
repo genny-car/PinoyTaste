@@ -120,6 +120,8 @@ public class PigarPigar extends AppCompatActivity {
                                     Toast.makeText(PigarPigar.this, "Bookmark Removed", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                        }else{
+                            Toast.makeText(PigarPigar.this,"Try Again!", Toast.LENGTH_SHORT).show();
                         }
                         i = 0;
 

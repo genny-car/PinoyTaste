@@ -117,6 +117,8 @@ public class IlokoHaloHalo extends AppCompatActivity {
                                     Toast.makeText(IlokoHaloHalo.this, "Bookmark Removed", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                        }else{
+                            Toast.makeText(IlokoHaloHalo.this,"Try Again!", Toast.LENGTH_SHORT).show();
                         }
                         i = 0;
 

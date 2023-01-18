@@ -117,6 +117,8 @@ public class    IlocosEmpanada extends AppCompatActivity {
                                     Toast.makeText(IlocosEmpanada.this, "Bookmark Removed", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                        }else{
+                            Toast.makeText(IlocosEmpanada.this,"Try Again!", Toast.LENGTH_SHORT).show();
                         }
                         i = 0;
 
