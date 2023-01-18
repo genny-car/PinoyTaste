@@ -16,9 +16,10 @@
         android:orientation="vertical">
 
         <ImageView
+            android:visibility="invisible"
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="1dp"
             android:scaleType="centerCrop"
             android:src="@drawable/viganlongganisa"></ImageView>
 

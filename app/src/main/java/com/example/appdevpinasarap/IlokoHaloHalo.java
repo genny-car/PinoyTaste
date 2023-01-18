@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.view.View;
 import android.widget.ImageButton;
@@ -37,6 +38,8 @@ public class IlokoHaloHalo extends AppCompatActivity {
     FirebaseUser user;
     DatabaseReference reference,reference1, db, db1;
     public String userID;
+
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,23 +84,44 @@ public class IlokoHaloHalo extends AppCompatActivity {
         bookmark_iloko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i++;
+
                 String title1 = titleiloko.getText().toString();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (i==1){
+                            if (!title1.isEmpty()) {
+                                user = FirebaseAuth.getInstance().getCurrentUser();
+                                db = FirebaseDatabase.getInstance().getReference();
+                                db1 = db.child("profdata");
 
 
-                if (!title1.isEmpty()) {
-                    user = FirebaseAuth.getInstance().getCurrentUser();
-                    db = FirebaseDatabase.getInstance().getReference();
-                    db1 = db.child("profdata");
+                                db1.child(user.getUid()).child("Bookmarks").child("IlokoHaloHalo").child("name").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(IlokoHaloHalo.this, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
 
+                    /*titlelongganisa.setText(getIntent().getExtras().getString("title"));
+                    int imageId = getIntent().getIntExtra("image",0);
+                    imageLongganisa.setImageResource(imageId);*/
 
-                    db1.child(user.getUid()).child("Bookmarks").child("IlokoHaloHalo").child("name").setValue(title1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(IlokoHaloHalo.this, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        }else if(i==2){
+                            db1.child(user.getUid()).child("Bookmarks").child("IlokoHaloHalo").child("name").setValue(null).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(IlokoHaloHalo.this, "Bookmark Removed", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         }
-                    });
-                    //titlepigar.setText(getIntent().getExtras().getString("title"));
-                }
+                        i = 0;
+
+                    }
+                }, 500);
             }
         });
 
