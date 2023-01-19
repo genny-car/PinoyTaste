@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#FFFFFF"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="7dp">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,12 +25,12 @@
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/ctr_bg"
-            android:fontFamily="@font/poppins_bold"
+            android:background="@drawable/location_btn"
+            android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:text="Vigan Longganisa"
-            android:textColor="@color/cardview_light_background"
-            android:textSize="30dp">
+            android:textColor="#000000"
+            android:textSize="25dp">
 
         </TextView>
 

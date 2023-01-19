@@ -43,19 +43,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolderClass> {
         holder.nameView.setText(items.get(position).getName());
         holder.imageView.setImageResource(items.get(position).getImage());
         String nameView_position = items.get(position).getName();
-        holder.layout.setOnClickListener(new View.OnClickListener() {
+        holder.nameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (nameView_position == "Vigan Longganisa") {
-                    Intent intent = new Intent(view.getContext(), ViganLongganisa.class);
-                    intent.putExtra("Vigan Longganisa", itemsd.getName());
-                    intent.putExtra("image", itemsd.getImage());
-                    view.getContext().startActivity(intent);
-                }else if(nameView_position == "Pigar Pigar") {
-                    Intent intent = new Intent(view.getContext(), PigarPigar.class);
-                    intent.putExtra("Pigar Pigar", itemsd.getName());
-                    intent.putExtra("image", itemsd.getImage());
-                }
+                Intent intent = new Intent(view.getContext(), ViganLongganisa.class);
+                view.getContext().startActivity(intent);
             }
         });
 
