@@ -43,13 +43,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolderClass> {
         holder.nameView.setText(items.get(position).getName());
         holder.imageView.setImageResource(items.get(position).getImage());
         String nameView_position = items.get(position).getName();
-        holder.nameView.setOnClickListener(new View.OnClickListener() {
+        /*holder.nameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ViganLongganisa.class);
                 view.getContext().startActivity(intent);
             }
-        });
+        });*/
 
 
         //Bookmarking or Favorites System

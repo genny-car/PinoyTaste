@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:background="@android:color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,53 +42,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/luzon_btn"
+            android:layout_width="308dp"
+            android:layout_height="150dp"
+            android:background="@drawable/loc_btn"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Luzon"
+            android:textAllCaps="false"
+            android:textColor="#FFFCFC"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.855" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cookinghome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.349" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <Button
-        android:id="@+id/luzon_btn"
-        android:layout_width="308dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="135sp"
-        android:layout_marginRight="50sp"
-        android:background="@drawable/loc_btn"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="Luzon"
-        android:textAllCaps="false"
-        android:textColor="#FFFCFC"
-        android:textSize="25dp" />
-
-    <Button
-        android:id="@+id/visayas_btn"
-        android:layout_width="308dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="310sp"
-        android:layout_marginRight="50sp"
-        android:background="@drawable/loc_btn"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="Visayas"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp" />
-
-    <Button
-        android:id="@+id/mindanao_btn"
-        android:layout_width="308dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="485sp"
-        android:layout_marginRight="50sp"
-        android:background="@drawable/loc_btn"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="Mindanao"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp" />
 
 </FrameLayout>
 

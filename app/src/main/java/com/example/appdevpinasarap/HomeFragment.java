@@ -39,8 +39,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         luzon_btn = v.findViewById(R.id.luzon_btn);
-        visayas_btn = v.findViewById(R.id.visayas_btn);
-        mindanao_btn = v.findViewById(R.id.mindanao_btn);
+        /*visayas_btn = v.findViewById(R.id.visayas_btn);
+        mindanao_btn = v.findViewById(R.id.mindanao_btn);*/
 
         luzon_btn.setOnClickListener(new View.OnClickListener() {
             @Override
